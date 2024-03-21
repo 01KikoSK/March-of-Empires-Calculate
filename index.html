@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .resource {
+            margin-bottom: 10px;
+        }
+        .resource input {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="resource">
+        <label for="gold">Gold:</label>
+        <input type="number" id="gold" value="0">
+    </div>
+    <div class="resource">
+        <label for="food">Food:</label>
+        <input type="number" id="food" value="0">
+    </div>
+    <div class="resource">
+        <label for="stone">Stone:</label>
+        <input type="number" id="stone" value="0">
+    </div>
+    <div class="resource">
+        <label for="iron">Iron:</label>
+        <input type="number" id="iron" value="0">
+    </div>
+    <button onclick="calculate()">Calculate</button>
+    <p id="result"></p>
+
+    <script>
+        function calculate() {
+            var gold = document.getElementById('gold').value;
+            var food = document.getElementById('food').value;
+            var stone = document.getElementById('stone').value;
+            var iron = document.getElementById('iron').value;
+
+            var total = parseInt(gold) + parseInt(food) + parseInt(stone) + parseInt(iron);
+
+            document.getElementById('result').innerHTML = 'Total amount of resources is: ' + total;
+        }
+    </script>
+</body>
+</html>
